@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Você é brasileire ou estrangeire?</h1>
+    País de origem: <input type="text" name="nomep" id="nomep">
+    <input type="button" value="verificar" onclick="mostrartx()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function mostrartx() {
+            var np = window.document.querySelector('input#nomep')
+            var res = window.document.querySelector('div#res')
+            var nomepp = np.value
+                        
+            if (nomepp == 'Brasil') {
+                res.innerHTML = `<p>Você nasceu no ${nomepp} então você é brasileire!</p>`
+            } else {
+                res.innerHTML = `<p>Você nasceu no ${nomepp}, então você é estrangeire!</p>`
+            }
+            
+        }
+        
+        
+
+    </script>
+</body>
+</html>
